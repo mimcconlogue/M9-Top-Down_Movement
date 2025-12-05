@@ -7,9 +7,6 @@ const RUNNER_DOWN_RIGHT = preload("uid://cst3aklarj68")
 const RUNNER_RIGHT = preload("uid://b4etxv4c5w1mq")
 const RUNNER_UP = preload("uid://dtrvq16cx035")
 const RUNNER_UP_RIGHT = preload("uid://c7x3s5c2r5l86")
-const RUNNER_DOWN_LEFT = preload("uid://bork38ywg3paf")
-const RUNNER_LEFT = preload("uid://bk7kvspkijqac")
-const RUNNER_UP_LEFT = preload("uid://b5yil62vnj1o7")
 const UP_LEFT = Vector2.UP + Vector2.LEFT
 const UP_RIGHT = Vector2.UP + Vector2.RIGHT
 const DOWN_LEFT = Vector2.DOWN + Vector2.LEFT
@@ -20,4 +17,19 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * max_speed
 	move_and_slide()
 	var direction_discrete := direction.sign()
-	
+	match direction_discrete:
+		
+		Vector2.RIGHT, Vector2.LEFT:
+			_skin.texture = RUNNER_RIGHT
+		Vector2.UP:
+			_skin.texture = RUNNER_UP
+		Vector2.DOWN:
+			_skin.texture = RUNNER_DOWN
+		
+		UP_RIGHT, UP_LEFT:
+			_skin.texture = RUNNER_UP_RIGHT
+		DOWN_RIGHT, DOWN_LEFT:
+			_skin.texture = RUNNER_DOWN_RIGHT
+			
+	if direction_discrete.length() > 0:
+		_skin.flip_h = direction.x < 0.0	
