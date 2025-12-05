@@ -1,0 +1,23 @@
+extends CharacterBody2D
+
+var max_speed = 600.0
+@onready var _skin: Sprite2D = $Skin
+const RUNNER_DOWN = preload("uid://c0i1ik45p7rhh")
+const RUNNER_DOWN_RIGHT = preload("uid://cst3aklarj68")
+const RUNNER_RIGHT = preload("uid://b4etxv4c5w1mq")
+const RUNNER_UP = preload("uid://dtrvq16cx035")
+const RUNNER_UP_RIGHT = preload("uid://c7x3s5c2r5l86")
+const RUNNER_DOWN_LEFT = preload("uid://bork38ywg3paf")
+const RUNNER_LEFT = preload("uid://bk7kvspkijqac")
+const RUNNER_UP_LEFT = preload("uid://b5yil62vnj1o7")
+const UP_LEFT = Vector2.UP + Vector2.LEFT
+const UP_RIGHT = Vector2.UP + Vector2.RIGHT
+const DOWN_LEFT = Vector2.DOWN + Vector2.LEFT
+const DOWN_RIGHT = Vector2.DOWN + Vector2.RIGHT
+
+func _physics_process(delta: float) -> void:
+	var direction := Input.get_vector("move_left","move_right","move_up","move_down")
+	velocity = direction * max_speed
+	move_and_slide()
+	var direction_discrete := direction.sign()
+	
