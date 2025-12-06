@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c62bk8cggi6yq"]
+
+[ext_resource type="PackedScene" uid="uid://p75euy1gcr34" path="res://lessons/runner.tscn" id="1_yasw7"]
+[ext_resource type="PackedScene" uid="uid://bbij6eqrguoky" path="res://lessons/obstical.tscn" id="2_4o7yg"]
+
+[node name="game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Runner" parent="." instance=ExtResource("1_yasw7")]
+position = Vector2(135, 100)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_4o7yg")]
+position = Vector2(447, 353)

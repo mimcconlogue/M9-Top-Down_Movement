@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfgwp0kovmjwf"]
+
+[ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="1_p5pve"]
+[ext_resource type="PackedScene" uid="uid://bbij6eqrguoky" path="res://lessons/obstical.tscn" id="2_urblq"]
+[ext_resource type="PackedScene" uid="uid://lpxvc0vsc2k6" path="res://circut.tscn" id="3_iw27f"]
+[ext_resource type="PackedScene" uid="uid://p75euy1gcr34" path="res://lessons/runner.tscn" id="4_71pa8"]
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("1_p5pve")
+metadata/_edit_lock_ = true
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-160, -288)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(96, -96)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-320, 160)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-576, 160)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-512, -800)
+
+[node name="StaticBody2D6" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-96, -832)
+
+[node name="StaticBody2D7" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-1152, -352)
+
+[node name="StaticBody2D8" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-1408, -416)
+
+[node name="StaticBody2D9" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-1216, -608)
+
+[node name="StaticBody2D10" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-960, -544)
+
+[node name="StaticBody2D14" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-1280, -64)
+
+[node name="StaticBody2D13" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-1248, 32)
+
+[node name="StaticBody2D12" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-1216, 128)
+
+[node name="StaticBody2D11" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(-1184, 224)
+
+[node name="StaticBody2D15" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(1344, 288)
+
+[node name="StaticBody2D16" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(896, 640)
+
+[node name="StaticBody2D17" parent="." instance=ExtResource("2_urblq")]
+position = Vector2(928, -704)
+
+[node name="Circut" parent="." instance=ExtResource("3_iw27f")]
+
+[node name="Runner" parent="." instance=ExtResource("4_71pa8")]
+position = Vector2(-224, -32)
+
+[node name="Camera2D" type="Camera2D" parent="Runner"]
+position = Vector2(224, 32)
