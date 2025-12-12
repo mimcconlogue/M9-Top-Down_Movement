@@ -1,5 +1,8 @@
-Camera2D
+GPUParticles2D
 Sprite2D
+Camera2D
+SubViewport
+CanvasGroup
 CollisionPolygon2D
 CollisionShape2D
 StaticBody2D
