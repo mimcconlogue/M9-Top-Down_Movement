@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfgwp0kovmjwf"]
+[gd_scene load_steps=7 format=3 uid="uid://dfgwp0kovmjwf"]
 
+[ext_resource type="Script" uid="uid://dvrm8xellhmok" path="res://map.gd" id="1_iw27f"]
 [ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="1_p5pve"]
 [ext_resource type="PackedScene" uid="uid://bbij6eqrguoky" path="res://lessons/obstical.tscn" id="2_urblq"]
 [ext_resource type="PackedScene" uid="uid://lpxvc0vsc2k6" path="res://circut.tscn" id="3_iw27f"]
 [ext_resource type="PackedScene" uid="uid://p75euy1gcr34" path="res://lessons/runner.tscn" id="4_71pa8"]
+[ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="5_urblq"]
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_iw27f")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -1
@@ -71,3 +74,6 @@ position = Vector2(-224, -32)
 
 [node name="Camera2D2" type="Camera2D" parent="Runner"]
 position = Vector2(224, 32)
+
+[node name="FinishLine" parent="." instance=ExtResource("5_urblq")]
+position = Vector2(-1408, -64)

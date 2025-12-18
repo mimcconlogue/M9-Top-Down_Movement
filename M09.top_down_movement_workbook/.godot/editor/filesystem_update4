@@ -1,4 +1,5 @@
-res://map.tscn
+res://assets/finish_line/finish_line.tscn
 res://addons/gdpractice/assets/theme.tres
-res://lessons/runner.tscn
+res://map.tscn
 res://lessons/runner.gd
+res://map.gd
