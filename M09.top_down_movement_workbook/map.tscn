@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dfgwp0kovmjwf"]
+[gd_scene load_steps=9 format=3 uid="uid://dfgwp0kovmjwf"]
 
 [ext_resource type="Script" uid="uid://dvrm8xellhmok" path="res://map.gd" id="1_iw27f"]
 [ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="1_p5pve"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://lpxvc0vsc2k6" path="res://circut.tscn" id="3_iw27f"]
 [ext_resource type="PackedScene" uid="uid://p75euy1gcr34" path="res://lessons/runner.tscn" id="4_71pa8"]
 [ext_resource type="PackedScene" uid="uid://xl56q8amb611" path="res://assets/finish_line/finish_line.tscn" id="5_urblq"]
+[ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="7_05x41"]
+[ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="8_gqbix"]
 
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
@@ -77,3 +79,24 @@ position = Vector2(224, 32)
 
 [node name="FinishLine" parent="." instance=ExtResource("5_urblq")]
 position = Vector2(-1408, -64)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CountDown" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -109.5
+offset_right = 0.5
+offset_bottom = 109.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("7_05x41")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_gqbix")
+metadata/_custom_type_script = "uid://57e8080cpukf"
